@@ -8,6 +8,7 @@
                              src="{{ $topic->user->avatar }}" title="{{ $topic->user->name }}">
                     </a>
                 </div>
+
                 <div class="media-body">
 
                     <div class="media-heading">
@@ -21,7 +22,7 @@
 
                     <div class="media-body meta">
 
-                        <a href="#" title="{{ $topic->category->name }}">
+                        <a href="{{ route('categories.show', $topic->category->id) }}" title="{{ $topic->category->name }}">
                             <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
                             {{ $topic->category->name }}
                         </a>
@@ -41,43 +42,7 @@
                 <hr>
             @endif
         @endforeach
-        {{--<tr>--}}
-            {{--<td class="text-center"><strong>{{$topic->id}}</strong></td>--}}
-
-            {{--<td>{{$topic->title}}</td>--}}
-            {{--<td>{{$topic->body}}</td>--}}
-            {{--<td>{{$topic->user_id}}</td>--}}
-            {{--<td>{{$topic->category_id}}</td>--}}
-            {{--<td>{{$topic->reply_count}}</td>--}}
-            {{--<td>{{$topic->view_count}}</td>--}}
-            {{--<td>{{$topic->last_reply_user_id}}</td>--}}
-            {{--<td>{{$topic->order}}</td>--}}
-            {{--<td>{{$topic->excerpt}}</td>--}}
-            {{--<td>{{$topic->slug}}</td>--}}
-
-            {{--<td class="text-right">--}}
-                {{--<a class="btn btn-xs btn-primary" href="{{ route('topics.show', $topic->id) }}">--}}
-                    {{--<i class="glyphicon glyphicon-eye-open"></i>--}}
-                {{--</a>--}}
-
-                {{--<a class="btn btn-xs btn-warning" href="{{ route('topics.edit', $topic->id) }}">--}}
-                    {{--<i class="glyphicon glyphicon-edit"></i>--}}
-                {{--</a>--}}
-
-                {{--<form action="{{ route('topics.destroy', $topic->id) }}" method="POST" style="display: inline;"--}}
-                      {{--onsubmit="return confirm('Delete? Are you sure?');">--}}
-                    {{--{{csrf_field()}}--}}
-                    {{--<input type="hidden" name="_method" value="DELETE">--}}
-
-                    {{--<button type="submit" class="btn btn-xs btn-danger"><i--}}
-                                {{--class="glyphicon glyphicon-trash"></i>--}}
-                    {{--</button>--}}
-                {{--</form>--}}
-            {{--</td>--}}
-        {{--</tr>--}}
-        {{--@endforeach--}}
     </ul>
-
 @else
     <div class="empty-block">暂无数据 ~_~</div>
 @endif
