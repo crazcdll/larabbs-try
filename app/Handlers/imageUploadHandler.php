@@ -2,7 +2,6 @@
 
 namespace App\Handlers;
 
-//use Intervention\Image as Image;
 use Image;
 
 class ImageUploadHandler
