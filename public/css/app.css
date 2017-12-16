@@ -8430,12 +8430,6 @@ body {
   margin-bottom: 0px;
 }
 
-/* User profile page */
-
-.users-show-page .user-info .thumbnail {
-  margin-bottom: 0px;
-}
-
 .users-show-page .nav-tabs {
   margin-bottom: 20px;
 }
@@ -8976,5 +8970,19 @@ body {
 .topic-reply .meta {
   font-size: .9em;
   color: #b3b3b3;
+}
+
+/* Notifications badge */
+
+.notifications-badge {
+  margin-top: -1;
+}
+
+.notifications-badge .badge-fade {
+  background-color: #EBE8E8;
+}
+
+.notifications-badge .badge-hint {
+  background-color: #d15b47 !important;
 }
 
